@@ -4,9 +4,19 @@
   box-sizing: border-box;
 }
 
+body a {
+  text-decoration: none;
+}
+
+body a:visited {
+  text-decoration: none;
+  color: #fd7e00;
+}
+
 header {
   font-family: "Questrial", sans-serif;
-  background-image: linear-gradient(to bottom, #272a2e, #212529);
+  background-image: url(../Recursos/Imgback1.jpg);
+  background-position: center, center;
 }
 
 header .header-top {
@@ -15,7 +25,7 @@ header .header-top {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0.6rem;
+  padding: 2rem;
 }
 
 header .header-top .logo {
@@ -36,7 +46,7 @@ header .header-top h1 {
   text-shadow: 4px 4px #212529;
   font-style: normal;
   font-weight: bold;
-  font-size: 70px;
+  font-size: 80px;
   text-decoration: overline;
   text-decoration-color: #ebbc12;
   text-transform: uppercase;
@@ -49,13 +59,24 @@ header .header-top h1 span {
   color: #ebbc12;
 }
 
+@media screen and (min-width: 100px) and (max-width: 748px) {
+  header .header-top h1 {
+    font-size: 70px;
+  }
+}
+
 header .header-top .Registro {
   display: flex;
   flex-direction: column;
 }
 
+header .header-top .Registro a:visited {
+  color: #212529;
+}
+
 header .header-top .Registro .header-boton-login {
   cursor: pointer;
+  font-size: 15px;
   background-color: white;
   border: none;
   margin: 10px;
@@ -70,6 +91,7 @@ header .header-top .Registro .header-boton-login:hover {
 
 header .header-top .Registro .header-boton-register {
   cursor: pointer;
+  font-size: 15px;
   color: #262424;
   background-color: #ebbc12;
   border: none;
@@ -99,14 +121,16 @@ main {
   background-color: #272a2e;
   background-image: url(../Recursos/Fondo.jpg);
   margin: 0;
-  padding: 1rem;
+  padding: 2 rem;
   padding-top: 2rem;
+  padding-bottom: 1rem;
   /* Add indicator arrow for the active tab */
 }
 
-main .h3main {
+main h2 {
   color: whitesmoke;
   text-shadow: 2px 2px #212529;
+  font-weight: bold;
   padding: 1.5rem;
   font-size: 2.5rem;
   text-shadow: 2px 2px #212529;
@@ -150,11 +174,36 @@ main .nav-pills-custom .nav-link.active::before {
   opacity: 1;
 }
 
+main .videosclases {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+main iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 main .medio {
-  background-image: linear-gradient(to bottom, #34383b, #212529);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url(../Recursos/Fondo.jpg);
   padding: 3rem;
-  margin: 1.5rem;
+  margin: 1rem;
   border-radius: 10px;
+}
+
+main .medio .progress {
+  width: 70%;
 }
 
 main .medio a {
@@ -163,38 +212,47 @@ main .medio a {
 }
 
 main .medio a:visited {
-  color: #ebbc12;
+  color: gold;
   text-decoration: none;
 }
 
-main .medio h2 {
-  color: #e4e2dc;
+main .medio h3 {
+  color: whitesmoke;
   text-shadow: 2px 2px #212529;
   font-size: 100;
   font-weight: bold;
   text-align: center;
-  line-height: 2;
+}
+
+@media screen and (min-width: 100px) and (max-width: 748px) {
+  main .medio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 footer {
   font-family: 'Questrial', sans-serif;
-  background-image: linear-gradient(to bottom, #212529, #272a2e);
-  padding-bottom: 1rem;
+  background-color: #212529;
+  border: 1.5rem solid #272a2e;
 }
 
-footer h2 {
+footer h3 {
   color: whitesmoke;
   text-shadow: 3px 3px #212529;
   font-style: normal;
   font-weight: bold;
   font-size: 1.9rem;
+  font-weight: bold;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   letter-spacing: 4px;
   padding: 4rem;
 }
 
-footer h2 span {
+footer h3 span {
   color: #ebbc12;
 }
 
@@ -210,10 +268,6 @@ footer ul:hover {
   size: 20px;
 }
 
-footer .barra-abajo {
-  padding-bottom: none;
-}
-
 footer .nav-item {
   align-items: center;
   text-align: center;
@@ -225,86 +279,87 @@ footer .nav-item:hover {
   transition: 1s;
 }
 
+footer .barra-abajo {
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 100px) and (max-width: 748px) {
+  footer .barra-abajo .nav-link {
+    display: none;
+  }
+}
+
 footer .bi-shop {
-  font-size: 20px;
+  font-size: 1.5rem;
   color: #ebbc12;
   text-align: center;
   align-items: center;
 }
 
 footer .bi-boxes {
-  font-size: 20px;
+  font-size: 1.5rem;
   color: #ebbc12;
   text-align: center;
   align-items: center;
 }
 
 footer .bi-chat-dots-fill {
-  font-size: 20px;
+  font-size: 1.5rem;
   color: #ebbc12;
   text-align: center;
   align-items: center;
 }
 
 footer .bi-file-earmark-person-fill {
-  font-size: 20px;
+  font-size: 1.5rem;
   color: #ebbc12;
   text-align: center;
   align-items: center;
-}
-
-footer .linea {
-  border-top: 0.5rem solid whitesmoke;
-  height: 50%;
-  max-width: 40rem;
-  padding: 0;
-  margin: 1.5rem auto 0 auto;
-  opacity: 50%;
-  border-radius: 80%;
 }
 
 footer .pie {
-  display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (min-width: 100px) and (max-width: 748px) {
+  footer .pie {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+footer .animacion {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
+  font-size: 60px;
+  margin-bottom: 1rem;
 }
 
-footer .pie .logoabajo {
-  text-align: center;
-  justify-content: space-evenly;
-  margin-right: 3rem;
+footer .animacion .logoabajo {
+  font-size: 60px;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
 }
 
-footer .pie .logoabajo img {
+footer .animacion .logoabajo img {
+  width: 100%;
   animation: waviy 1.5s infinite;
   animation-delay: calc(.1s * var(--i));
-  width: 5rem;
-}
-
-footer h4 {
-  color: whitesmoke;
-  font-family: "Questrial", sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-shadow: 2px 2px #212529;
-  transition: all 1s;
-  padding: 20px;
-  text-align: center;
-}
-
-footer h4:hover {
-  font-size: 2rem;
-  color: #ebbc12;
+  width: 6rem;
 }
 
 footer .waviy {
   text-align: center;
   -webkit-box-reflect: below -30px linear-gradient(transparent, rgba(0, 0, 0, 0.699));
-  font-size: 40px;
+  font-size: 50px;
   justify-content: center;
+  margin-bottom: 3rem;
 }
 
 footer .waviy span {
@@ -319,11 +374,35 @@ footer .waviy span {
 }
 
 @keyframes waviy {
-  0%, 40%, 100% {
+  0%,
+  40%,
+  100% {
     transform: translateY(0);
   }
   20% {
     transform: translateY(-20px);
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 748px) {
+  footer .waviy {
+    display: none;
+  }
+}
+
+footer .derechos {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 0.6rem;
+  padding-bottom: 0.2rem;
+  border-right: 1.5rem solid #272a2e;
+  border-left: 1.5rem solid #272a2e;
+}
+
+@media screen and (min-width: 100px) and (max-width: 748px) {
+  footer .derechos {
+    padding: 1.5rem;
+    padding-bottom: 1;
   }
 }
 
@@ -334,26 +413,5 @@ footer .nav {
   align-items: center;
   color: whitesmoke;
   text-shadow: 2px 2px #212529;
-}
-
-footer ul {
-  list-style: none;
-}
-
-footer ul:visited {
-  color: #ebbc12;
-}
-
-footer ul:hover {
-  size: 20px;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-footer a:visited {
-  text-decoration: none;
-  color: #ebbc12;
 }
 /*# sourceMappingURL=Cursada.css.map */
