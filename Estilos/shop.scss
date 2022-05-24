@@ -99,6 +99,10 @@ header {
             display: flex;
             flex-direction: column;
 
+            a {
+                color: $gris;
+            }
+
             a:visited {
                 color: $gris;
             }

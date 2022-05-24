@@ -61,6 +61,10 @@ header .header-top .Registro {
   flex-direction: column;
 }
 
+header .header-top .Registro a {
+  color: #212529;
+}
+
 header .header-top .Registro a:visited {
   color: #212529;
 }
